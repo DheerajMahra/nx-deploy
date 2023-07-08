@@ -6,7 +6,7 @@
     "serve:host": "nx run host:serve",
     "serve:shop": "nx run shop:serve",
     "serve:cart": "nx run cart:serve",
-    "server:all": "nx serve host --open --devRemotes=shop,cart",
+    "serve:all": "nx serve host --open --devRemotes=shop,cart",
     "build:host:prod": "nx run host:build:prod",
     "build:shop:prod": "nx run shop:build:prod",
     "build:cart:prod": "nx run cart:build:prod",
