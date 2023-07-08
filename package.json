@@ -14,7 +14,7 @@
     "affected": "nx graph --affected",
     "build:affected": "nx affected -t build",
     "generate:remote": "nx g @nx/react:remote",
-    "generate:library": "nx generate @nx/react:library"
+    "generate:library": "nx generate @nx/react:library --js=true"
   },
   "private": true,
   "dependencies": {
