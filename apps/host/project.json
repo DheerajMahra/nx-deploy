@@ -22,13 +22,19 @@
         "webpackConfig": "apps/host/webpack.config.js"
       },
       "configurations": {
-        "development": {
+        "qa": {
           "extractLicenses": false,
           "optimization": false,
           "sourceMap": true,
           "vendorChunk": true
         },
-        "production": {
+        "staging": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "prod": {
           "fileReplacements": [
             {
               "replace": "apps/host/src/environments/environment.ts",
@@ -54,11 +60,14 @@
         "port": 4200
       },
       "configurations": {
-        "development": {
-          "buildTarget": "host:build:development"
+        "qa": {
+          "buildTarget": "host:build:qa"
         },
-        "production": {
-          "buildTarget": "host:build:production",
+        "staging": {
+          "buildTarget": "host:build:staging"
+        },
+        "prod": {
+          "buildTarget": "host:build:prod",
           "hmr": false
         }
       }
@@ -78,11 +87,14 @@
         "port": 4200
       },
       "configurations": {
-        "development": {
-          "buildTarget": "host:build:development"
+        "qa": {
+          "buildTarget": "host:build:qa"
         },
-        "production": {
-          "buildTarget": "host:build:production"
+        "staging": {
+          "buildTarget": "host:build:staging"
+        },
+        "prod": {
+          "buildTarget": "host:build:prod"
         }
       }
     },

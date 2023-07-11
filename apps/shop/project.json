@@ -22,13 +22,19 @@
         "webpackConfig": "apps/shop/webpack.config.js"
       },
       "configurations": {
-        "development": {
+        "qa": {
           "extractLicenses": false,
           "optimization": false,
           "sourceMap": true,
           "vendorChunk": true
         },
-        "production": {
+        "staging": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "prod": {
           "fileReplacements": [
             {
               "replace": "apps/shop/src/environments/environment.ts",
@@ -54,11 +60,14 @@
         "port": 4201
       },
       "configurations": {
-        "development": {
-          "buildTarget": "shop:build:development"
+        "qa": {
+          "buildTarget": "shop:build:qa"
         },
-        "production": {
-          "buildTarget": "shop:build:production",
+        "staging": {
+          "buildTarget": "shop:build:staging"
+        },
+        "prod": {
+          "buildTarget": "shop:build:prod",
           "hmr": false
         }
       }
@@ -78,11 +87,14 @@
         "port": 4201
       },
       "configurations": {
-        "development": {
-          "buildTarget": "shop:build:development"
+        "qa": {
+          "buildTarget": "shop:build:qa"
         },
-        "production": {
-          "buildTarget": "shop:build:production"
+        "staging": {
+          "buildTarget": "shop:build:staging"
+        },
+        "prod": {
+          "buildTarget": "shop:build:prod"
         }
       }
     },

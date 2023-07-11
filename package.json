@@ -3,16 +3,36 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "serve:host": "nx run host:serve",
-    "serve:shop": "nx run shop:serve",
-    "serve:cart": "nx run cart:serve",
-    "serve:all": "nx serve host --open --devRemotes=shop,cart",
+    "serve:host:qa": "nx run host:serve:qa",
+    "serve:host:staging": "nx run host:serve:staging",
+    "serve:host:prod": "nx run host:serve:prod",
+
+    "serve:shop:qa": "nx run shop:serve:qa",
+    "serve:shop:staging": "nx run shop:serve:staging",
+    "serve:shop:prod": "nx run shop:serve:prod",
+
+    "serve:all:qa": "nx serve host --open --devRemotes=shop --configuration=qa",
+    "serve:all:staging": "nx serve host --open --devRemotes=shop --configuration=staging",
+    "serve:all:prod": "nx serve host --open --devRemotes=shop --configuration=prod",
+
+    "build:host:qa": "nx run host:build:qa",
+    "build:host:staging": "nx run host:build:staging",
     "build:host:prod": "nx run host:build:prod",
+
+    "build:shop:qa": "nx run shop:build:qa",
+    "build:shop:staging": "nx run shop:build:staging",
     "build:shop:prod": "nx run shop:build:prod",
-    "build:cart:prod": "nx run cart:build:prod",
-    "build:all:prod": "nx run-many -t build --configuration=production",
+
+    "build:all:qa": "nx run-many -t build --configuration=qa",
+    "build:all:staging": "nx run-many -t build --configuration=staging",
+    "build:all:prod": "nx run-many -t build --configuration=prod",
+
     "affected": "nx graph --affected",
-    "build:affected": "nx affected -t build",
+
+    "build:affected:qa": "nx affected -t build --configuration=qa",
+    "build:affected:staging": "nx affected -t build --configuration=staging",
+    "build:affected:prod": "nx affected -t build --configuration=prod",
+
     "generate:remote": "nx g @nx/react:remote",
     "generate:library": "nx generate @nx/react:library --js=true"
   },

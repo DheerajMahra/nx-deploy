@@ -25,7 +25,6 @@ const prodConfig = {
    */
   remotes: [
     ['shop', 'https://nx-micro-frontend-deployment-shop.vercel.app/'],
-    ['cart', 'https://nx-micro-frontend-deployment-cart.vercel.app/'],
   ],
 };
 
